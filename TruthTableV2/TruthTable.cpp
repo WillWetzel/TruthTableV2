@@ -7,36 +7,32 @@
 #include "TruthTable.h"
 using namespace std;
 
-TruthTable::TruthTable() {
+TruthTable::TruthTable(const unsigned n) {
 	/*Vectors of vectors, outer length n, inner is 2^n (number of truth results for n inputs)*/
 	std::vector<std::vector<int>> output(n, std::vector<int>(1 << n));
 	/* Have a 3x8 vector for column based pattern in output data. Using vector means each vector is 0, so only
 	* have to worry about setting the values we want to 1. */
-
 	unsigned num_to_fill = 1U << (n - 1);	//Fill half the rows at once.
-
+	std::cout << "Making TruthTable" << std::endl;
 }
 
 TruthTable::~TruthTable() {
 	//Nothing to deallocate
 }
 
+void TruthTable::printTable() {
 
-TruthTable ANDTable::TablePopulate() {
-
-	TruthTable table;
-	unsigned nums_to_fill = table.getNum_To_Fill();
-
-	for (unsigned col = 0; col < table.getRows(); ++col, num_to_fill >>= 1U)		//Loop over each column.
+	for (unsigned x = 0; x < (1 << n); ++x)
 	{
-		for (unsigned row = num_to_fill; row < (1U << table.getRows()); row += (num_to_fill * 2))		//Update each row.
+		for (unsigned y = 0; y < n; ++y)
 		{
-			std::fill_n(&output[col][row], num_to_fill, 1);
+			std::cout << output[y][x] << " ";
 		}
+		std::cout << std::endl;
 	}
-
-
 }
+
+
 
 
 /*

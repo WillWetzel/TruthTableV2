@@ -110,9 +110,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="ANDTable.h" />
     <ClInclude Include="TruthTable.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ANDTable.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="TruthTable.cpp" />
   </ItemGroup>

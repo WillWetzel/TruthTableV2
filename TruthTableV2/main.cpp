@@ -5,10 +5,21 @@
 #include <iostream>
 #include <string>
 #include <iomanip>
+#include "TruthTable.h"
+#include "ANDTable.h"
 
 using namespace std;
 
 int main() {
+	const unsigned ROWS = 2;
+
+	ANDTable andGate(ROWS);
+
+	andGate.TablePopulate();
+	andGate.printTable();
+
+	getchar();
+	getchar();
 
 	return 0;
 }
