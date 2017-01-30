@@ -32,8 +32,19 @@ void TruthTable::printTable() {
 	}
 }
 
+/*
+std::ostream&  operator<< (std::ostream& outStream, std::vector output) {
 
-
+	for (unsigned x = 0; x < (1 << n); ++x)
+	{
+		for (unsigned y = 0; y < n; ++y)
+		{
+			std::cout << output[y][x] << " ";
+		}
+		std::cout << std::endl;
+	}
+}
+*/
 
 /*
 void OutputAndTable(bool *p, bool *q)

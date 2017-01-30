@@ -11,7 +11,7 @@
 using namespace std;
 
 int main() {
-	const unsigned ROWS = 2;
+	const unsigned ROWS = 3;
 
 	ANDTable andGate(ROWS);
 

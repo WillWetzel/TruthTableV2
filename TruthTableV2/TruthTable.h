@@ -26,9 +26,11 @@ public:
 
 
 protected:
-	const unsigned n = 2;
+	const unsigned n = 3;
 	unsigned num_to_fill = 1U << (n - 1);	//Fill half the rows at once.
 
 	std::vector<std::vector<int>> output = std::vector<std::vector<int>>(n, std::vector<int>(1 << n));		
 			//Creates a vector of vectors with outer length n, inner length 2^n. All initalized to zero.
 };
+
+//std::ostream&  operator<< (std::ostream& outStream, std::vector output)
